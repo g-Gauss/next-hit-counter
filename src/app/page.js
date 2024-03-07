@@ -24,10 +24,13 @@ writeFile(
 */
 
 function Home() {
+  const currentObject = JSON.parse(readFile(DATABASE_PATH));
+  currentObject.hits++;
+  writeFile(DATABASE_PATH, JSON.stringify(currentObject));
   return (
     <main>
       <h1>Welcome!</h1>
-      <p>You are visitor number X.</p>
+      <p>You are visitor number {currentObject.hits}.</p>
     </main>
   );
 }
