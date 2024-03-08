@@ -3,6 +3,8 @@ import React from "react";
 import CensoredButton from "../components/CensoredButton";
 import HitCounter from "../components/HitCounter/HitCounter";
 
+export const dynamic = "force-dynamic";
+
 function Home() {
   return (
     <main>
